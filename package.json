@@ -1,0 +1,11 @@
+{
+  "name": "moment1-v2",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "Yao-Yu Wu",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
+}
