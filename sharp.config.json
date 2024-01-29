@@ -1,0 +1,8 @@
+{
+    "webp": {
+      "nearLossless": true
+    },
+    "avif": {
+      "quality": 80
+    }
+  }

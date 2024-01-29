@@ -1,5 +1,5 @@
 {
-  "name": "moment1-v2",
+  "name": "moment1",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -10,6 +10,9 @@
     "start": "parcel",
     "build": "parcel build"
   },
+  "browserslist": [
+    "> 0.5%, last 2 versions, not dead"
+  ],
   "devDependencies": {
     "parcel": "^2.11.0"
   }
