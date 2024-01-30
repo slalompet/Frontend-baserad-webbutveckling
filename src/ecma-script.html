@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frondend moment 1</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="ecma-script.html">Process</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Frontend-baserad webbutveckling, Moment 2</h1>
+        <p>EcmaScript</p>
+        <div>
+            <label for="filter">Sök:</label>
+            <input type="text" placeholder="Sök efter kurskod eller kursnamn" id="filter" oninput="filterTable()">
+        </div>
+        <table id="courseTable">
+
+        </table>
+    </main>
+    <footer>
+        <p>Laborationsuppgift för kursen DT211G, Frontend-baserad webbutveckling. © Copyright Yao-Yu Wu, 2024</p>
+    </footer>
+    <script src="course-table.js"></script>
+</body>
+</html>
