@@ -25,7 +25,14 @@
             <input type="text" placeholder="Sök efter kurskod eller kursnamn" id="filter" oninput="filterTable()">
         </div>
         <table id="courseTable">
-
+            <thead>
+                <tr>
+                    <td>Code</td>
+                    <td>Course Name</td>
+                </tr>
+            </thead>
+            <tbody id="courses-list"></tbody>
+            <div id="error"></div>
         </table>
     </main>
     <footer>

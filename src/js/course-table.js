@@ -1,20 +1,33 @@
 "use strict";
 
-let data;
+const url = "https://dahlgren.miun.se/ramschema_ht23.php";
 
-async function getData(url) {
-    try {
-        const response = await fetch(url);
-        return await response.json();
-    } catch (error){
-        console.error(error);
-    }
-}
+window.onload = init;
+
+// call a fetch function
 
 async function init() {
-    data = await getData('https://dahlgren.miun.se/ramschema_ht23.php');
-    console.table(data);
-}    
+    try {
+        const response = await fetch(url);
+        const courses = await response.json();
 
-init();
+        displayCourses(courses);
+    } catch {
+        document.getElementById("error").innerHTML = "<p>Något gick fel. Försök igen senare!</p>";
+    }
+}
     
+// function that displays data
+
+function displayCourses(courses) {
+    const coursesEl = document.getElementById("courses-list");
+
+    courses.forEach((course) => {
+        coursesEl.innerHTML += `
+            <tr>
+                <td>${course.code}</td>
+                <td>${course.coursename}</td>
+            </tr>
+            `;
+    });
+}
