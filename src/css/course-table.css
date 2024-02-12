@@ -1,0 +1,17 @@
+
+.search-bar {
+    width: 500px;
+}
+
+.table {
+    width: 500px;
+}
+
+.table-header {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.table-body {
+    text-align: center;
+}

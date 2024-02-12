@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frondend moment 1</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/course-table.css">
 </head>
 <body>
     <header>
@@ -21,22 +22,23 @@
         <h1>Frontend-baserad webbutveckling, Moment 2</h1>
         <p>EcmaScript</p>
         <div class="search-wrapper">
-            <h2>Sök</h2>
+            <label>Sök</label>
             <input 
             type="text" 
             name="searchBar" 
             id="searchBar"
+            class="search-bar"
             placeholder="Sök efter kurskod eller kursnamn">
         </div>
-        <table id="courseTable">
+        <table id="courseTable" class="table">
             <thead>
                 <tr>
-                    <td id="course-code">Kurskod</td>
-                    <td id="course-name">Namn</td>
-                    <td id="course-progression">Progression</td>
+                    <td id="course-code" class="table-header">Kurskod</td>
+                    <td id="course-name" class="table-header">Namn</td>
+                    <td id="course-progression" class="table-header">Progression</td>
                 </tr>
             </thead>
-            <tbody id="courses-list"></tbody>
+            <tbody id="courses-list" class="table-body"></tbody>
             <div id="error"></div>
         </table>
     </main>
