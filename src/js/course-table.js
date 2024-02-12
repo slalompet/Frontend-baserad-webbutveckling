@@ -1,12 +1,26 @@
 "use strict";
 
 const url = "https://dahlgren.miun.se/ramschema_ht23.php";
+const searchBar = document.getElementById("searchBar");
 let coursesCodeEl = document.getElementById("course-code");
 let coursesNameEl = document.getElementById("course-name");
 let coursesProgressionEl = document.getElementById("course-progression");
 coursesCodeEl.addEventListener("click", sortCourseByCode);
 coursesNameEl.addEventListener("click", sortCourseByName);
 coursesProgressionEl.addEventListener("click", sortProgression);
+
+// search bar
+let courses = [];
+searchBar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+    const filteredCourses = courses.filter((course) => {
+        return (
+            course.code.toLowerCase().includes(searchString) ||
+            course.coursename.toLowerCase().includes(searchString)
+        );
+    });
+    displayCourses(filteredCourses);
+})
 
 window.onload = init;
 
@@ -15,7 +29,7 @@ window.onload = init;
 async function init() {
     try {
         const response = await fetch(url);
-        const courses = await response.json();
+        courses = await response.json();
 
         displayCourses(courses);
     } catch {

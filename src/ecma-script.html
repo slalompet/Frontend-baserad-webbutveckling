@@ -20,9 +20,13 @@
     <main>
         <h1>Frontend-baserad webbutveckling, Moment 2</h1>
         <p>EcmaScript</p>
-        <div>
-            <label for="filter">Sök:</label>
-            <input type="text" placeholder="Sök efter kurskod eller kursnamn" id="filter" oninput="filterTable()">
+        <div class="search-wrapper">
+            <h2>Sök</h2>
+            <input 
+            type="text" 
+            name="searchBar" 
+            id="searchBar"
+            placeholder="Sök efter kurskod eller kursnamn">
         </div>
         <table id="courseTable">
             <thead>
