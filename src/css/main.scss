@@ -1,0 +1,32 @@
+
+// theme colors
+$primary-bg: #f5f5dc;
+$primary-orange: #deb887;
+$primary-text: #804000;
+
+// theme colors - dark
+$primary-bg-darkm: #804000;
+$primary-orange-darkm: #deb887;
+$primary-text-darkm: #f5f5dc;
+
+// spacing 
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// fonts
+
+body {
+    background-color: $primary-bg;
+}
+
+header {
+    background-color: $primary-orange;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: $primary-bg-darkm;
+        color: $primary-orange-darkm ;
+    }
+}
+
