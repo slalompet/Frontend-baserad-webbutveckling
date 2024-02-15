@@ -1,3 +1,12 @@
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 @mixin reset-list {
     margin: 0;
     padding: 0;
@@ -22,4 +31,17 @@ nav {
         @include horizontal-list;
         text-align: center;
     }
+
+}.container {
+    @extend main; 
+    column-gap: $base-padding *5;
+    margin-bottom: $base-margin;
+}
+
+.text-wrapper {
+    width: 500px;
+}
+
+footer {
+    @extend main;
 }
