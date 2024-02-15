@@ -1,0 +1,61 @@
+// theme colors
+$primary-bg: #f5f5dc;
+$primary-orange: #deb887;
+$primary-gray: #D7CEC7;
+$primary-text: #000000;
+$primary-link: #76323F;
+
+// theme colors - dark
+$primary-bg-darkm: #804000;
+$primary-orange-darkm: #deb887;
+$primary-gray-darkm: #D7CEC7;
+$primary-text-darkm: #f5f5dc;
+$primary-link-darkm: #76323F;
+
+// spacing 
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// fonts
+$primary-heading: 'Palatino', 'Times New Roman', Times, serif;
+$primary-bodytext: 'Popins', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+h1 {
+    font-family: $primary-heading;
+}
+
+h2 {
+    font-family: $primary-heading;
+}
+
+a {
+    color: $primary-link;
+}
+
+a:hover {
+    color: darken($primary-link, 50%);
+}
+
+body {
+    background-color: $primary-bg;
+    color: $primary-text;
+    padding: $base-padding;
+    margin: $base-margin;
+    font-family: $primary-bodytext;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    a {
+        color: lighten($primary-link, 50%);
+    }
+    
+    a:hover {
+        color: lighten($primary-link, 80%);
+    }
+    
+    body {
+        background: $primary-bg-darkm;
+        color: lighten($primary-orange-darkm, 20%);
+    }
+}
