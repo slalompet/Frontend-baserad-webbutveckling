@@ -79,6 +79,22 @@ main {
             left: -2px;
             right: 2em;
         }
+
+        @media (max-width: map-get($breakpoint, "sm")) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 1em;
+        }
+    }
+}
+
+header {
+    @media (max-width: map-get($breakpoint, "sm")) {
+        @if map-get($breakpoint, "sm") {
+            height: 100vh;
+            font-size: 3rem;
+        }
     }
 }
 
@@ -99,10 +115,6 @@ nav {
     box-sizing: border-box;
 
     column-gap: $base-padding * 5;
-
-    @include md {
-        flex-direction: row;
-    }
 
     @include lg {
         flex-direction: row;
@@ -162,12 +174,8 @@ nav {
 }
 
 @include xl {
-    @for $i from 1 through $grid-columns {
-        .col-#{$i}-xl {
-            box-sizing: border-box;
-            flex-grow: 0;
-            width: math.div($i * 100%, $grid-columns);
-        }
+    .col-3-xl {
+        width: 100%; 
     }
 }
 
