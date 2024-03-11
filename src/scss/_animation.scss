@@ -1,0 +1,24 @@
+
+.button {
+    padding: 20px 50px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: $primary-link;
+    background-color: $primary-orange;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 9px $primary-gray;
+}
+
+.button:hover {
+    color: lighten($primary-link, 50%);
+    background-color: darken($primary-orange, 30%);
+}
+
+.button:active {
+    background-color: darken($primary-orange, 30%);
+  box-shadow: 0 5px $primary-gray;
+  transform: translateY(10px);
+}
