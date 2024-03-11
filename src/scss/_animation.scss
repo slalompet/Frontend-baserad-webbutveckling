@@ -19,6 +19,39 @@
 
 .button:active {
     background-color: darken($primary-orange, 30%);
-  box-shadow: 0 5px $primary-gray;
-  transform: translateY(10px);
+    box-shadow: 0 5px $primary-gray;
+    transform: translateY(10px);
 }
+
+.gradient-BG {
+    background: linear-gradient(45deg, $primary-orange, #f97aab);
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    animation: none;    
+}
+
+.gradient-BG:hover {
+    background: linear-gradient(45deg, $primary-orange, #f97aab, #5bc7ef, #7be2ca);
+    background-size: 400% 400%;
+    animation: gradient-transition 15s ease infinite;
+}
+
+@keyframes gradient-transition {
+    0% {
+		background-position: 0% 50%;
+	}
+    25% {
+		background-position: 100% 50%;
+	}
+	50% {
+		background-position: 50% 50%;
+	}
+	75% {
+		background-position: 25% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
