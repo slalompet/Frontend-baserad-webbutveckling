@@ -1,4 +1,5 @@
 
+
 .button {
     padding: 20px 50px;
     font-size: 20px;
@@ -10,11 +11,13 @@
     border: none;
     border-radius: 50px;
     box-shadow: 0 9px $primary-gray;
+    transition: width 2s ease-in-out;
 }
 
 .button:hover {
     color: lighten($primary-link, 50%);
     background-color: darken($primary-orange, 30%);
+    width: 110%;
 }
 
 .button:active {
@@ -55,3 +58,34 @@
 	}
 }
 
+.sakura-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: fit-content;
+}
+
+.sakura-BG, .sakura-top {
+    width: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.sakura-top {
+    animation: none;
+}
+
+.sakura-top:hover {
+    animation: rotate 3s linear infinite
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-5deg) translateY(-10%);
+    }
+    100% {
+        transform: rotate(5deg) translateY(10%);
+    }
+}
