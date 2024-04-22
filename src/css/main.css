@@ -48,6 +48,11 @@ main div {
     gap: 1em;
 }
 
+.diagram-wrapper {
+    max-width: 700px; 
+    width: 100%;
+}
+
 .clock {
     position: absolute;
     left: 50%;

@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frondend moment 3</title>
+    <title>Frondend moment 5</title>
     <link rel="stylesheet" href="scss/main.scss">
-    <script src="js/main.js" type="module"></script>
 </head>
 
 <body>
@@ -27,45 +26,27 @@
     <main>
         <h1>Frontend-baserad webbutveckling, Moment 5</h1>
         <p>Here are the diagrams</p>
-        <div class="container">
-            <div class="ani-wrapper">
+        <div class="">
+            <div class="diagram-wrapper">
                 <h2>Diagram 1</h2>
-                <p>6 most applied courses at Mid University</p>
+                <p>Top 6 most applied courses at Mid University</p>
                 <div>
-                    <canvas id="myChart"></canvas>
-                  </div>
-                  
-                  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-                  
-                  <script>
-                    const ctx = document.getElementById('myChart');
-                  
-                    new Chart(ctx, {
-                      type: 'bar',
-                      data: {
-                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                        datasets: [{
-                          label: '# of Votes',
-                          data: [12, 19, 3, 5, 2, 3],
-                          borderWidth: 1
-                        }]
-                      },
-                      options: {
-                        scales: {
-                          y: {
-                            beginAtZero: true
-                          }
-                        }
-                      }
-                    });
-                  </script>
-                  
+                    <canvas id="bar-chart"></canvas>
+                </div>                  
+            </div>
+            <div class="diagram-wrapper">
+                <h2>Diagram 2</h2>
+                <p>Top 5 most popular programs at Mid University</p>
+                <div>
+                    <canvas id="pie-chart"></canvas>
+                </div>                  
             </div>
         </div>
     </main>
     <footer>
         <p>Laborationsuppgift för kursen DT211G, Frontend-baserad webbutveckling. © Copyright Yao-Yu Wu, 2024</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/diagram.js" type="module"></script>
 </body>
-
 </html>
